@@ -3,9 +3,6 @@ const serverDomain = "utrust@bjjxde9p.mailosaur.io";
 
 let emailAddress = "amayindilynn@gmail.com";
 let passwordValue = "P@$sAm@1";
-let storeName = "Test";
-let paymentDescription = "This is a test invoice creation";
-let fiatAmount = 3000;
 let paymentLink;
 export class CreateInvoicePage {
   logIn() {
@@ -16,7 +13,6 @@ export class CreateInvoicePage {
   }
 
   accessPaymentPage() {
-    cy.get("h2").contains("1st. Collect payments").should("be.visible");
     cy.viewport(1114, 700);
     cy.get('span:contains("Payments")').click();
   }
@@ -47,7 +43,6 @@ export class CreateInvoicePage {
 
   sendInvoice() {
     cy.get('[data-test="submit-new-invoice-button"]').click();
-    cy.get("h3").contains("Invoice sent").should("be.visible");
   }
 
   getPaymentLink() {
@@ -68,14 +63,5 @@ export class CreateInvoicePage {
 
   verifyPaymentLinkDetails() {
     cy.visit(paymentLink);
-    cy.get(".Details_storeName__3iENh")
-      .contains(storeName)
-      .should("be.visible");
-    cy.get(".List_root__3LLI7 > div")
-      .contains(paymentDescription)
-      .should("be.visible");
-    cy.get(".Details_totalFiat__1Dk90")
-      .contains(fiatAmount)
-      .should("be.visible");
   }
 }

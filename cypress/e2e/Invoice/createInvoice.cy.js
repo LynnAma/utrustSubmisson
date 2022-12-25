@@ -1,4 +1,4 @@
-import { CreateInvoicePage } from "../../cypress/support/pages/createInvoice";
+import { CreateInvoicePage } from "../../support/pages/createInvoice";
 
 const createNewInvoice = new CreateInvoicePage();
 

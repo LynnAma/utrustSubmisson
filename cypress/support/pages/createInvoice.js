@@ -28,6 +28,8 @@ export class CreateInvoicePage {
   fillInvoiceForm() {
     cy.get('input[name="customerName"]').type("Ama Lynn");
     cy.get('input[name="customerEmail"]').type(serverDomain);
+    cy.get('input[type="checkbox"]').uncheck({ force: true });
+    cy.get('input[type="checkbox"]').check({ force: true });
     cy.get('input[name="billingAddress"]').type("123 Test Avenue");
     cy.get('input[name="city"]').type("Lagos");
     cy.get('input[name="postCode"]').type("100222");

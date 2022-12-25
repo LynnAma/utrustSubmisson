@@ -9,8 +9,7 @@
     "cy:open": "cypress open",
     "cy:run:chrome": "cypress run --browser chrome",
     "cy:run:firefox": "cypress run --browser firefox",
-    "cy:run:report" : "cypress run --record --key 04735e46-af33-4963-b858-b1c2e5e3f3f6"
-
+    "cy:run:report": "cypress run --record --key 04735e46-af33-4963-b858-b1c2e5e3f3f6"
   },
   "repository": {
     "type": "git",
@@ -25,6 +24,7 @@
   "devDependencies": {
     "@testing-library/cypress": "^9.0.0",
     "cypress": "^12.2.0",
-    "cypress-mailosaur": "^2.13.0"
+    "cypress-mailosaur": "^2.13.0",
+    "mochawesome": "^7.1.3"
   }
 }

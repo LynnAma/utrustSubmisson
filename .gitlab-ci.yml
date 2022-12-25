@@ -63,13 +63,12 @@ build-job:       # This job runs in the build stage, which runs first.
     - echo "Compiling the code..."
     - echo "Compile complete."
 
-e2e-invoice-chrome:
-  image: cypress/browsers:node14.19.0-chrome100-ff99-edge
+e2e-invoice-staging:
   stage: test
   only:
     - main
   script:
-    - npm run e2e-invoice-chrome
+    - npm run invoice
   retry:
     max: 2
     when:

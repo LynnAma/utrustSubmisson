@@ -4,7 +4,7 @@
   "description": "Questions:",
   "main": "index.js",
   "scripts": {
-        "cy-client:stage": "npx cypress open",
+        "cy_run": "cypress run --browser chrome",
         "invoice": "npm run cy_run -- --spec 'cypress/e2e/Invoice/**/*'"
   },
   "repository": {

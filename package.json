@@ -4,7 +4,13 @@
   "description": "Questions:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "CreateInvoice": "npm run cy:run -- --spec 'cypress/e2e/**/*'",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:firefox": "cypress run --browser firefox",
+    "cy:run:report" : "cypress run --record --key 04735e46-af33-4963-b858-b1c2e5e3f3f6"
+
   },
   "repository": {
     "type": "git",
